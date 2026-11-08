@@ -1,0 +1,517 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    
+}
+
+/* ===== HEADER ===== */
+.header {
+    background-color: #2d5a27;
+    background-color: rgba(0, 128, 0, 0.2);
+    text-align: center;
+    padding: 20px 10px 15px 10px;
+    border-radius: 200px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    margin: 3px;
+}
+
+.header h1 {
+    color: #a8d5a2;
+    font-size: 42px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    background-color: #d4e157;
+    color: #333;
+    text-decoration: none;
+    padding: 10px 40px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-flex;
+}
+
+/* ===== HERO ===== */
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.hero-img {
+   width: 97%;
+   height: 100%;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 0%;
+    right: 30%;
+    font-size: 50px;
+    text-align: center;
+    width: 100%;
+    text-shadow: 2px 2px 5px black;
+}
+
+
+.hero-btns {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 60px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.btn-hijau {
+    background-color: #5a9e2f;
+    color: black;
+    text-decoration: none;
+    padding: 12px 30px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 100px;
+}
+
+
+
+.btn-hijau-muda {
+    background-color: #a8e6a3;
+    color: black;
+    text-decoration: none;
+    padding: 12px 30px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 100px;
+}
+
+/* ===== AKSI NYATA ===== */
+.aksi {
+    background-color: #d4edda;
+    text-align: center;
+    padding: 30px 20px 40px 20px;
+}
+
+.judul-aksi {
+    color: #1a4d1a;
+    font-size: 50px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    margin-bottom: 0;
+}
+
+.judul-limbah {
+    color: #8b9a2b;
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.sub-judul {
+    color: #7cb342;
+    font-size: 22px;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.img-sampah {
+    width: 80%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.teks-penjelasan {
+    color: #6b8e23;
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 10px auto;
+    font-family: Georgia, serif;
+}
+
+.btn-selengkapnya {
+    display: inline-block;
+    background-color: #8fbc8f;
+    color: #333;
+    text-decoration: none;
+    padding: 10px 30px;
+    margin-top: 20px;
+    font-size: 14px;
+    border: 1px solid #556b2f;
+}
+
+/* ===== PRODUK ===== */
+.produk {
+    background-color: #2d5a27;
+    text-align: center;
+    padding: 30px 20px 40px 20px;
+}
+
+/* Membuat layout grid untuk 6 gambar */
+.galeri-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    width: 100px;
+    max-width: 1000px;
+}
+
+/* Styling untuk setiap kotak/kartu gambar */
+.kartu {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    height: fit-content; /* Agar tinggi kartu mengikuti isi */
+}
+
+
+
+/* Sembunyikan checkbox */
+.toggle-input {
+    display: none;
+}
+
+.gambar-wrapper {
+    cursor: pointer;
+    display: block;
+    text-align: center;
+}
+
+.gambar-wrapper img {
+    width: 100%;
+    border-radius: 6px;
+    transition: transform 0.2s;
+}
+
+.gambar-wrapper img:hover {
+    transform: scale(1.03);
+}
+
+.petunjuk {
+    font-size: 12px;
+    color: #888;
+    margin: 8px 0 0 0;
+}
+
+/* Menyembunyikan penjelasan di awal */
+.penjelasan {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    text-align: left;
+}
+
+.penjelasan h3 {
+    margin: 10px 0 5px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.penjelasan p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+}
+
+.penjelasan h4 {
+    margin: 10px 0 5px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.penjelasan li {
+     margin: 0;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+    padding: 5px;
+    list-style-type: circle;
+}
+
+.penjelasan ul {
+    padding: 5px;
+    
+}
+
+/* KUNCI AKSI: Membuka penjelasan kartu yang dicentang */
+.toggle-input:checked ~ .penjelasan {
+    max-height: 1000000px; /* Batas tinggi penjelasan saat terbuka */
+    opacity: 1;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed #ddd;
+}
+
+
+/* ===== KOLABORASI ===== */
+.kolaborasi {
+    background-color: #b8c9d9;
+    text-align: center;
+    padding: 30px 20px 40px 20px;
+}
+
+.judul-kolab {
+    color: #1a2a6c;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.antar {
+    color: #5a9e8f;
+    font-size: 28px;
+    text-decoration: underline;
+}
+
+.kolab-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.kolab-card {
+    background-color: #c8d8e0;
+    border-radius: 15px;
+    padding: 20px;
+    width: 280px;
+}
+
+.img-kolab {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.kolab-card h3 {
+    color: #1a2a6c;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.btn-kolab {
+    display: inline-block;
+    background-color: #d0e8f0;
+    color: #333;
+    text-decoration: none;
+    padding: 8px 25px;
+    border-radius: 15px;
+    font-size: 13px;
+    border: 1px solid #1a2a6c;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'inter',sans-serif;
+    background-color:#1a2018;
+    color:#ffffff
+}
+
+/*=====Anggota Kelompok===*/
+
+.sosmed {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.sosmed a {
+    text-decoration: none;
+    color: white;
+    padding: 9px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.wa {
+    background: #25d366;
+}
+
+.ig {
+    background: #c13584;
+}
+
+.sosmed a:hover {
+    transform: translate(-4px);
+    opacity: 0.8;
+}
+
+.member {
+    background-color:#2d5a27;
+    border-radius:16px;
+    padding:20px 24px;
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:16px;
+    max-width:700px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.member img {
+    border-radius: 10px;
+}
+
+
+.anggota-section{
+    background-color:#1a2018;
+    padding:50px,20px,60px;
+}
+
+.anggota-section h2 {
+    font-size:2.5rem;
+    font-weight:900;
+    margin-bottom:30px;
+    padding-left:10px;
+    color:#e8f5e9;
+}
+
+.member-card{
+    background-color:#2d5a27;
+    border-radius:16px;
+    padding:20px 24px;
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:16px;
+    max-width:700px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.kontak-section {
+    background-color: #2d5a27;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 15px;
+}
+
+.kontak-section h2 {
+    text-align: center;
+}
+
+footer {
+    background-color: #2d5a27;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+footer a {
+    color: #333;
+    background-color: #5a9e2f;
+    padding: 15px;
+    border-radius: 30px;
+    gap: 50px;
+}
+
+.contact-form {
+    padding: 1px;
+    margin: 5px;
+}
+
+.kontak {
+    background: linear-gradient(135deg, #258b48, #176b38);
+    padding: 35px;
+    margin: 25px;
+    border-radius: 20px;
+    color: white;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.kontak h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.deskripsi-kontak {
+    text-align: center;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.kontak form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.kontak label {
+    font-weight: bold;
+}
+
+.kontak textarea {
+    min-height: 140px;
+    padding: 15px;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    font-family: Arial;
+    font-size: 15px;
+    resize: vertical;
+    outline: none;
+}
+
+.kontak textarea:focus {
+    border-color: #b9ed72;
+}
+
+.kontak button {
+    background: #20c765;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.kontak button:hover {
+    background: #2d5a27;
+    transform: translateY(-3px);
+}
+
+@media screen {
+    1000px
+}
